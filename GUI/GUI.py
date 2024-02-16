@@ -3,7 +3,7 @@
 #Tk class is used to create a root window
 root = Tk()
 root.configure(background='Ivory')
-root.title('Smart Disease Predictor System')
+root.title('Disease Prediction System')
 root.resizable(0,0)
 
 #taking first input as symptom
@@ -59,54 +59,54 @@ def Exit():
         exit()
         
 #Headings for the GUI written at the top of GUI
-w2 = Label(root, justify=LEFT, text="Disease Predictor using Machine Learning", fg="Red", bg="Ivory")
-w2.config(font=("Times",30,"bold italic"))
+w2 = Label(root, justify=LEFT, text="Disease Prediction", fg="black", bg="beige")
+w2.config(font=("SF Pro Rounded",30,"semibold"))
 w2.grid(row=1, column=0, columnspan=2, padx=100)
-w2 = Label(root, justify=LEFT, text="Contributors: Sudhanshu,Rohan,Aditya", fg="Pink", bg="Ivory")
-w2.config(font=("Times",30,"bold italic"))
+w2 = Label(root, justify=LEFT, text="Contributors: "Evalyne,Kimberly,Catherine,Kennedy,Martin", fg="black", bg="beige")
+w2.config(font=("SF Pro Rounded",30,"semibold"))
 w2.grid(row=2, column=0, columnspan=2, padx=100)
 
 #Label for the name
-NameLb = Label(root, text="Name of the Patient", fg="Red", bg="Ivory")
-NameLb.config(font=("Times",15,"bold italic"))
+NameLb = Label(root, text="Patient's Name", fg="black", bg="beige")
+NameLb.config(font=("SF Pro Rounded",15,"semibold"))
 NameLb.grid(row=6, column=0, pady=15, sticky=W)
 
 #Creating Labels for the symtoms
 S1Lb = Label(root, text="Symptom 1", fg="Black", bg="Ivory")
-S1Lb.config(font=("Times",15,"bold italic"))
+S1Lb.config(font=("SF Pro Rounded",15,"semibold"))
 S1Lb.grid(row=7, column=0, pady=10, sticky=W)
 
 S2Lb = Label(root, text="Symptom 2", fg="Black", bg="Ivory")
-S2Lb.config(font=("Times",15,"bold italic"))
+S2Lb.config(font=("SF Pro Rounded",15,"semibold"))
 S2Lb.grid(row=8, column=0, pady=10, sticky=W)
 
 S3Lb = Label(root, text="Symptom 3", fg="Black",bg="Ivory")
-S3Lb.config(font=("Times",15,"bold italic"))
+S3Lb.config(font=("SF Pro Rounded",15,"semibold"))
 S3Lb.grid(row=9, column=0, pady=10, sticky=W)
 
 S4Lb = Label(root, text="Symptom 4", fg="Black", bg="Ivory")
-S4Lb.config(font=("Times",15,"bold italic"))
+S4Lb.config(font=("SF Pro Rounded",15,"semibold"))
 S4Lb.grid(row=10, column=0, pady=10, sticky=W)
 
 S5Lb = Label(root, text="Symptom 5", fg="Black", bg="Ivory")
-S5Lb.config(font=("Times",15,"bold italic"))
+S5Lb.config(font=("SF Pro Rounded",15,"semibold"))
 S5Lb.grid(row=11, column=0, pady=10, sticky=W)
 
 #Labels for the different algorithms
 lrLb = Label(root, text="DecisionTree", fg="white", bg="red", width = 20)
-lrLb.config(font=("Times",15,"bold italic"))
+lrLb.config(font=("SF Pro Rounded",15,"semibold"))
 lrLb.grid(row=15, column=0, pady=10,sticky=W)
 
 destreeLb = Label(root, text="RandomForest", fg="Red", bg="Orange", width = 20)
-destreeLb.config(font=("Times",15,"bold italic"))
+destreeLb.config(font=("SF Pro Rounded",15,"semibold"))
 destreeLb.grid(row=17, column=0, pady=10, sticky=W)
 
 ranfLb = Label(root, text="NaiveBayes", fg="White", bg="green", width = 20)
-ranfLb.config(font=("Times",15,"bold italic"))
+ranfLb.config(font=("SF Pro Rounded",15,"semibold"))
 ranfLb.grid(row=19, column=0, pady=10, sticky=W)
 
 knnLb = Label(root, text="kNearestNeighbour", fg="Red", bg="Sky Blue", width = 20)
-knnLb.config(font=("Times",15,"bold italic"))
+knnLb.config(font=("SF Pro Rounded",15,"semibold"))
 knnLb.grid(row=21, column=0, pady=10, sticky=W)
 OPTIONS = sorted(l1)
 
@@ -132,40 +132,40 @@ S5.grid(row=11, column=1)
 
 #Buttons for predicting the disease using different algorithms
 dst = Button(root, text="Prediction 1", command=DecisionTree,bg="Red",fg="yellow")
-dst.config(font=("Times",15,"bold italic"))
+dst.config(font=("SF Pro Rounded",15,"semibold"))
 dst.grid(row=6, column=3,padx=10)
 
 rnf = Button(root, text="Prediction 2", command=randomforest,bg="Light green",fg="red")
-rnf.config(font=("Times",15,"bold italic"))
+rnf.config(font=("SF Pro Rounded",15,"semibold"))
 rnf.grid(row=7, column=3,padx=10)
 
 lr = Button(root, text="Prediction 3", command=NaiveBayes,bg="Blue",fg="white")
-lr.config(font=("Times",15,"bold italic"))
+lr.config(font=("SF Pro Rounded",15,"semibold"))
 lr.grid(row=8, column=3,padx=10)
 
 kn = Button(root, text="Prediction 4", command=KNN,bg="sky blue",fg="red")
-kn.config(font=("Times",15,"bold italic"))
+kn.config(font=("SF Pro Rounded",15,"semibold"))
 kn.grid(row=9, column=3,padx=10)
 
 rs = Button(root,text="Reset Inputs", command=Reset,bg="yellow",fg="purple",width=15)
-rs.config(font=("Times",15,"bold italic"))
+rs.config(font=("SF Pro Rounded",15,"semibold"))
 rs.grid(row=10,column=3,padx=10)
 
 ex = Button(root,text="Exit System", command=Exit,bg="yellow",fg="purple",width=15)
-ex.config(font=("Times",15,"bold italic"))
+ex.config(font=("SF Pro Rounded",15,"semibold"))
 ex.grid(row=11,column=3,padx=10)
 
 #Showing the output of different algorithms
-t1=Label(root,font=("Times",15,"bold italic"),text="Decision Tree",height=1,bg="Light green"
+t1=Label(root,font=("SF Pro Rounded",15,"semibold"),text="Decision Tree",height=1,bg="Light green"
          ,width=40,fg="red",textvariable=pred1,relief="sunken").grid(row=15, column=1, padx=10)
 
-t2=Label(root,font=("Times",15,"bold italic"),text="Random Forest",height=1,bg="Purple"
+t2=Label(root,font=("SF Pro Rounded",15,"semibold"),text="Random Forest",height=1,bg="Purple"
          ,width=40,fg="white",textvariable=pred2,relief="sunken").grid(row=17, column=1, padx=10)
 
-t3=Label(root,font=("Times",15,"bold italic"),text="Naive Bayes",height=1,bg="red"
+t3=Label(root,font=("SF Pro Rounded",15,"semibold"),text="Naive Bayes",height=1,bg="red"
          ,width=40,fg="orange",textvariable=pred3,relief="sunken").grid(row=19, column=1, padx=10)
 
-t4=Label(root,font=("Times",15,"bold italic"),text="kNearest Neighbour",height=1,bg="Blue"
+t4=Label(root,font=("SF Pro Rounded",15,"semibold"),text="kNearest Neighbour",height=1,bg="Blue"
          ,width=40,fg="yellow",textvariable=pred4,relief="sunken").grid(row=21, column=1, padx=10)
 
 #calling this function because the application is ready to run
